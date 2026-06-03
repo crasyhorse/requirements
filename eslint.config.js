@@ -6,7 +6,15 @@ import tseslint from 'typescript-eslint'
 
 export default tseslint.config(
   {
-    ignores: ['dist', 'dist-electron', 'coverage']
+    ignores: [
+      'dist',
+      'dist-electron',
+      'coverage',
+      'docs',
+      '.features-gen',
+      'playwright-report',
+      'test-results'
+    ]
   },
   js.configs.recommended,
   ...tseslint.configs.strictTypeChecked,
@@ -26,7 +34,12 @@ export default tseslint.config(
     }
   },
   {
-    files: ['electron.vite.config.ts', 'src/main/**/*.ts', 'src/preload/**/*.ts'],
+    files: [
+      'electron.vite.config.ts',
+      'playwright.config.ts',
+      'src/main/**/*.ts',
+      'src/preload/**/*.ts'
+    ],
     languageOptions: {
       globals: {
         __dirname: 'readonly',

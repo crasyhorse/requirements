@@ -12,6 +12,11 @@
     "test:watch": "vitest",
     "coverage": "vitest run --coverage",
     "docs": "typedoc",
+    "bdd:gen": "bddgen",
+    "e2e:install": "playwright install",
+    "e2e": "bddgen && playwright test",
+    "e2e:ui": "bddgen && playwright test --ui",
+    "e2e:headed": "bddgen && playwright test --headed",
     "lint": "eslint .",
     "format": "prettier --write .",
     "format:check": "prettier --check ."
@@ -24,6 +29,7 @@
   },
   "devDependencies": {
     "@eslint/js": "latest",
+    "@playwright/test": "latest",
     "@vitejs/plugin-react": "latest",
     "@types/node": "latest",
     "@types/react": "latest",
@@ -36,6 +42,7 @@
     "eslint-plugin-react-hooks": "latest",
     "eslint-plugin-react-refresh": "latest",
     "jsdom": "latest",
+    "playwright-bdd": "latest",
     "prettier": "latest",
     "typedoc": "latest",
     "typescript": "latest",

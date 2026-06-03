@@ -4,3 +4,6 @@ dist-electron
 coverage
 
 docs
+.features-gen
+playwright-report
+test-results
