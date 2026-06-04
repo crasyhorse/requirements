@@ -1,14 +1,14 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import { PrimeReactProvider } from 'primereact/api'
-import 'primeicons/primeicons.css'
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import { PrimeReactProvider } from 'primereact/api';
+import 'primeicons/primeicons.css';
 
-import { App } from './App'
+import { App } from './App';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
-  <React.StrictMode>
-    <PrimeReactProvider>
-      <App />
-    </PrimeReactProvider>
-  </React.StrictMode>
-)
+    <React.StrictMode>
+        <PrimeReactProvider>
+            <App />
+        </PrimeReactProvider>
+    </React.StrictMode>,
+);

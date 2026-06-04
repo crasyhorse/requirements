@@ -1,14 +1,6 @@
 {
-  "extends": "./tsconfig.web.json",
-  "compilerOptions": {
-    "composite": false,
-    "types": ["node", "@playwright/test"]
-  },
-  "include": [
-    "playwright.config.ts",
-    "features/**/*.ts",
-    "src/renderer/**/*.ts",
-    "src/renderer/**/*.tsx"
-  ],
-  "exclude": [".features-gen", "playwright-report", "test-results"]
+    "extends": "./tsconfig.web.json",
+    "compilerOptions": { "composite": false, "types": ["node", "@playwright/test"] },
+    "include": ["playwright.config.ts", "features/**/*.ts", "src/renderer/**/*.ts", "src/renderer/**/*.tsx"],
+    "exclude": [".features-gen", "playwright-report", "test-results"]
 }

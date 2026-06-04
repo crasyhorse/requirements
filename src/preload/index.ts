@@ -1,7 +1,5 @@
-import { contextBridge } from 'electron'
+import { contextBridge } from 'electron';
 
-const api = {
-  platform: process.platform
-}
+const api = { platform: process.platform };
 
-contextBridge.exposeInMainWorld('api', api)
+contextBridge.exposeInMainWorld('api', api);
