@@ -1,16 +1,15 @@
-import { includeIgnoreFile } from '@eslint/compat'
 import js from '@eslint/js'
-import type { Linter } from 'eslint'
 import { defineConfig } from 'eslint/config'
 import prettier from 'eslint-config-prettier'
 import reactHooks from 'eslint-plugin-react-hooks'
 import reactRefresh from 'eslint-plugin-react-refresh'
 import { fileURLToPath } from 'node:url'
 import tseslint from 'typescript-eslint'
+import { includeIgnoreFile } from '@eslint/config-helpers'
 
 const configDirectory = fileURLToPath(new URL('.', import.meta.url))
 const gitignorePath = fileURLToPath(new URL('.gitignore', import.meta.url))
-const reactHooksRecommendedRules = reactHooks.configs.recommended.rules as Linter.RulesRecord
+const reactHooksRecommendedRules = reactHooks.configs.recommended.rules
 
 export default defineConfig(
   includeIgnoreFile(gitignorePath),
