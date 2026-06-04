@@ -1,5 +1,5 @@
 import { defineConfig } from '@playwright/test'
-import { defineBddConfig } from 'playwright-bdd'
+import { cucumberReporter, defineBddConfig } from 'playwright-bdd'
 
 const isCI = Boolean(process.env.CI)
 const testDir = defineBddConfig({
@@ -16,7 +16,12 @@ export default defineConfig({
   forbidOnly: isCI,
   retries: isCI ? 2 : 0,
   ...(isCI ? { workers: 1 } : {}),
-  reporter: [['list'], ['html', { outputFolder: 'playwright-report', open: 'never' }]],
+  reporter: [
+    ['list'],
+    ['html', { outputFolder: 'playwright-report', open: 'never' }],
+    cucumberReporter('html', { outputFile: 'cucumber-report/index.html' }),
+    cucumberReporter('json', { outputFile: 'cucumber-report/report.json' })
+  ],
   outputDir: 'test-results',
   use: {
     trace: 'on-first-retry'

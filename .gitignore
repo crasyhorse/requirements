@@ -13,3 +13,4 @@ docs
 .features-gen
 playwright-report
 test-results
+cucumber-report

@@ -32,7 +32,7 @@ TypeScript is configured with `strict` enabled for both Electron and renderer co
 
 ## End-to-end BDD tests
 
-Playwright is configured in `playwright.config.ts` to generate tests from Gherkin features with `playwright-bdd` and launch the built Electron app through Playwright's Electron automation API. Generated BDD files under `test/e2e/.features-gen`, Playwright reports, and test artifacts are ignored by Git.
+Playwright is configured in `playwright.config.ts` to generate tests from Gherkin features with `playwright-bdd`, launch the built Electron app through Playwright's Electron automation API, and emit Cucumber HTML/JSON reports in `cucumber-report`. Generated BDD files under `test/e2e/.features-gen`, Playwright reports, Cucumber reports, and test artifacts are ignored by Git.
 
 ## Documentation and coverage
 

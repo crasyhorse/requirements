@@ -22,6 +22,7 @@ export default defineConfig(
       'docs',
       '.features-gen',
       'playwright-report',
+      'cucumber-report',
       'test-results'
     ]
   },
