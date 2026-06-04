@@ -7,35 +7,32 @@
   "scripts": {
     "dev": "electron-vite dev",
     "build": "tsc --noEmit && electron-vite build",
-    "preview": "electron-vite preview",
-    "test": "vitest run",
-    "test:watch": "vitest",
-    "coverage": "vitest run --coverage",
-    "docs": "typedoc",
-    "bdd:gen": "bddgen",
-    "e2e:install": "playwright install",
-    "e2e": "npm run build && bddgen && playwright test",
-    "e2e:ui": "npm run build && bddgen && playwright test --ui",
-    "e2e:headed": "npm run build && bddgen && playwright test --headed",
-    "lint": "eslint .",
     "format": "prettier --write .",
-    "format:check": "prettier --check ."
+    "lint": "eslint .",
+    "preview": "electron-vite preview",
+    "test:unit": "vitest",
+    "test:unit:coverage": "vitest run --coverage",
+    "docs": "typedoc",
+    "test:e2e": "npm run build && bddgen && playwright test",
+    "test:e2e:ui": "npm run build && bddgen && playwright test --ui"
   },
   "dependencies": {
+    "@eslint/config-helpers": "^0.6.0",
     "primeicons": "latest",
     "primereact": "latest",
-    "react": "latest",
-    "react-dom": "latest"
+    "react": "^19",
+    "react-dom": "^19"
   },
   "devDependencies": {
     "@eslint/compat": "latest",
     "@eslint/js": "latest",
     "@playwright/test": "latest",
-    "@vitejs/plugin-react": "latest",
     "@types/node": "latest",
     "@types/react": "latest",
     "@types/react-dom": "latest",
+    "@vitejs/plugin-react": "latest",
     "@vitest/coverage-istanbul": "latest",
+    "@vitest/coverage-v8": "4.1.8",
     "electron": "latest",
     "electron-vite": "latest",
     "eslint": "latest",
@@ -50,7 +47,7 @@
     "typedoc": "latest",
     "typescript": "latest",
     "typescript-eslint": "latest",
-    "vite": "latest",
-    "vitest": "latest"
+    "vite": "^7.3.5",
+    "vitest": "^4.1.8"
   }
 }
