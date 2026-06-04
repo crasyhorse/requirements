@@ -24,7 +24,7 @@ A minimal Electron desktop application scaffolded with Vite, React, TypeScript, 
 - `src/main` contains the Electron main process.
 - `src/preload` contains the preload bridge exposed to the renderer.
 - `src/renderer` contains the React application, PrimeReact usage, and Vitest tests.
-- `features` contains Playwright BDD feature files, Electron fixtures, and step definitions.
+- `test/e2e` contains Playwright BDD feature files, Electron fixtures, and step definitions.
 
 ## Static analysis
 
@@ -32,7 +32,7 @@ TypeScript is configured with `strict` enabled for both Electron and renderer co
 
 ## End-to-end BDD tests
 
-Playwright is configured in `playwright.config.ts` to generate tests from Gherkin features with `playwright-bdd` and launch the built Electron app through Playwright's Electron automation API. Generated BDD files, Playwright reports, and test artifacts are ignored by Git.
+Playwright is configured in `playwright.config.ts` to generate tests from Gherkin features with `playwright-bdd` and launch the built Electron app through Playwright's Electron automation API. Generated BDD files under `test/e2e/.features-gen`, Playwright reports, and test artifacts are ignored by Git.
 
 ## Documentation and coverage
 

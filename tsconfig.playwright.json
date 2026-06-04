@@ -6,10 +6,9 @@
   },
   "include": [
     "playwright.config.ts",
-    "features/**/*.ts",
-    "features/fixtures/**/*.ts",
+    "test/e2e/**/*.ts",
     "src/renderer/**/*.ts",
     "src/renderer/**/*.tsx"
   ],
-  "exclude": [".features-gen", "playwright-report", "test-results"]
+  "exclude": ["test/e2e/.features-gen", ".features-gen", "playwright-report", "test-results"]
 }
