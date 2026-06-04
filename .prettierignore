@@ -1,0 +1,9 @@
+node_modules
+dist
+dist-electron
+coverage
+
+docs
+.features-gen
+playwright-report
+test-results
