@@ -7,12 +7,12 @@
     "scripts": {
         "dev": "electron-vite dev",
         "build": "tsc --noEmit && electron-vite build",
+        "docs": "typedoc",
         "format": "prettier --write .",
         "lint": "eslint .",
         "preview": "electron-vite preview",
         "test:unit": "vitest",
         "test:unit:coverage": "vitest run --coverage",
-        "docs": "typedoc",
         "test:e2e": "npm run build && bddgen && playwright test",
         "test:e2e:ui": "npm run build && bddgen && playwright test --ui"
     },
@@ -44,6 +44,7 @@
         "playwright": "latest",
         "playwright-bdd": "latest",
         "prettier": "latest",
+        "sass-embedded": "^1.100.0",
         "typedoc": "latest",
         "typescript": "latest",
         "typescript-eslint": "latest",
